@@ -54,7 +54,7 @@ while True:
 
     # Move mode
     if physics_world.interface.current_mode == 1 :
-        physics_world.bot.autonomous_move(t)
+        physics_world.bot.autonomous_move(physics_world.interface, t)
             
     if physics_world.interface.current_mode == 2 :
         physics_world.bot.manual_move(physics_world.interface)
@@ -75,7 +75,7 @@ while True:
     # Avance simulation
     p.stepSimulation(physicsClientId=physics_world.client_id)
 
-     # Calculs temps
+    # Calculs temps
     elapsed_time = time.time() - start_time
     sleep_time = max(0, T - elapsed_time)
     time.sleep(sleep_time)

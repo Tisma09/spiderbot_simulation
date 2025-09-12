@@ -3,6 +3,7 @@ import numpy as np
 import math
 
 from interface import Interface
+from kinematics import *
 
 class Robot:
 
@@ -51,8 +52,20 @@ class Robot:
 
 
 
-    def autonomous_move(self):
-        pass
+    def autonomous_move(self, interface, t):
+        x = p.readUserDebugParameter(interface.param_x, physicsClientId=interface.world_parent_id)
+        y = p.readUserDebugParameter(interface.param_y, physicsClientId=interface.world_parent_id)
+        z = p.readUserDebugParameter(interface.param_z, physicsClientId=interface.world_parent_id)
+
+        result = ik_leg((x, y, z))
+        if result is not None:
+            q1_result, q2_result, q3_result = result
+
+            self.q[9] = q1_result
+            self.q[10] = q2_result 
+            self.q[11] = q3_result
+
+
 
 
 

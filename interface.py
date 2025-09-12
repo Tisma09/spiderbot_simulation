@@ -30,8 +30,16 @@ class Interface:
     def init_auto(self):
         self.current_mode = 1
 
+        self.param_x = p.addUserDebugParameter(" X Goal Position", -100.0, 200.0, 0.0, physicsClientId=self.world_parent_id)
+        self.param_y = p.addUserDebugParameter(" Y Goal Position", 0.0, 200.0, 94.5, physicsClientId=self.world_parent_id)
+        self.param_z = p.addUserDebugParameter(" Z Position", -100.0, 0.0, -97.64, physicsClientId=self.world_parent_id)
+
     def end_auto(self):
         self.current_mode = 0
+
+        p.removeAllUserParameters(physicsClientId=self.world_parent_id)
+        self.auto_button_id = p.addUserDebugParameter(" Mode Auto", 1, 0, 1, physicsClientId=self.world_parent_id)
+        self.manual_button_id = p.addUserDebugParameter(" Mode Manuel", 1, 0, 1, physicsClientId=self.world_parent_id)
 
 
     def init_manual(self):
