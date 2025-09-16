@@ -19,11 +19,15 @@ def clamp(x, a=-1.0, b=1.0):
     return max(a, min(b, x))
 
 
-def ik_leg(target, leg_base=(0.0,0.0,0.0), coxa=45.5, tl=49, fl=97.64, offset_foot_angle=0.2443461):
+def ik_leg(target, leg_rotation=0.0, leg_base=(0.0,0.0,0.0), coxa=45.5, tl=49, fl=97.64, offset_foot_angle=0.2443461):
     # target : (x,y,z) in body frame (mm)
     # leg_base : (bx,by,bz) offset of leg base in body frame (mm)
 
     local_target = np.array(target) - np.array(leg_base)
+    rot = np.array([[math.cos(-leg_rotation), -math.sin(-leg_rotation), 0],
+                    [math.sin(-leg_rotation),  math.cos(-leg_rotation), 0],
+                    [0, 0, 1]])
+    local_target = rot @ local_target
     x, y, z = local_target.tolist()
 
     # Projection for knee and foot

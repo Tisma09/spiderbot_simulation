@@ -42,14 +42,21 @@ while True:
         physics_world.bot.init_auto_pos()
     elif p.readUserDebugParameter(physics_world.interface.auto_button_id) % 2 == 1 and physics_world.interface.current_mode == 1 :
         print("End Auto mode")
-        physics_world.interface.end_auto()
+        physics_world.interface.end_mode()
     # Mode manuel
     elif p.readUserDebugParameter(physics_world.interface.manual_button_id) % 2 == 0 and physics_world.interface.current_mode == 0 :
         print("Start Manual mode")
         physics_world.interface.init_manual()
     elif p.readUserDebugParameter(physics_world.interface.manual_button_id) % 2 == 1 and physics_world.interface.current_mode == 2 :
         print("End Manual mode")
-        physics_world.interface.end_manual()
+        physics_world.interface.end_mode()
+    # Mode manuel cartesien
+    elif p.readUserDebugParameter(physics_world.interface.manual_cart_button_id) % 2 == 0 and physics_world.interface.current_mode == 0 :
+        print("Start Manual Cartesian mode")
+        physics_world.interface.init_manual_cart()
+    elif p.readUserDebugParameter(physics_world.interface.manual_cart_button_id) % 2 == 1 and physics_world.interface.current_mode == 3 :
+        print("End Manual Cartesian mode")
+        physics_world.interface.end_mode()
     
 
     # Move mode
@@ -58,6 +65,9 @@ while True:
             
     if physics_world.interface.current_mode == 2 :
         physics_world.bot.manual_move(physics_world.interface)
+
+    if physics_world.interface.current_mode == 3 :
+        physics_world.bot.manual_cart_move(physics_world.interface)
     
     # Mise à jour des positions des moteurs
     for joint_index, position in enumerate(physics_world.bot.q):
@@ -67,7 +77,7 @@ while True:
                 jointIndex=joint_index,
                 controlMode=p.POSITION_CONTROL,
                 targetPosition=position,
-                force=10,
+                force=1,
                 physicsClientId = physics_world.client_id
             )
 
