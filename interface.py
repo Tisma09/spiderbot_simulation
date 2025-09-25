@@ -27,11 +27,14 @@ class Interface:
         self.param_DG_H = None
         self.param_DG_V = None
 
+        self.angle_id = None
+
         
     def init_auto(self):
         self.current_mode = 1
         self.run_id = p.addUserDebugParameter(" Run", 1, 0, 1, physicsClientId=self.world_parent_id)
         self.rot_id = p.addUserDebugParameter(" Turn", 1, 0, 1, physicsClientId=self.world_parent_id)
+        self.angle_id = p.addUserDebugParameter(" Roatation angle", -np.pi, np.pi, 0.0, physicsClientId=self.world_parent_id)
         
 
         
