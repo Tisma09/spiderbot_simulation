@@ -52,10 +52,10 @@ def update_urdf(input_stl_list, folder_obj, new_urdf_path) :
 
 
 
-folder_stl = "Robot_mesh_urdf_V2/meshes"
-folder_obj = "Robot_mesh_urdf_V2/meshes/collision_form"
-new_urdf_path = "Robot_mesh_urdf_V2/RobotProto_With_Col.urdf"
-urdf_tree = ET.parse("Robot_mesh_urdf_V2/RobotProto.urdf")
+folder_stl = "Robot_mesh_urdf_V3/meshes"
+folder_obj = "Robot_mesh_urdf_V3/meshes/collision_form"
+new_urdf_path = "Robot_mesh_urdf_V3/RobotSpider_With_Col.urdf"
+urdf_tree = ET.parse("Robot_mesh_urdf_V3/RobotSpider.urdf")
 
 input_stl_list = ["Rotation_Horrizontale"]
 deth = 10

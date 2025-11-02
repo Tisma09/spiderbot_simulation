@@ -1,0 +1,430 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="RobotProto_UnLink">
+    <link name="Chassis-1">
+        <inertial>
+            <origin xyz="1.8562928971732616e-15 0.040299999999996165 0.007076950770185227" rpy="0.0 0.0 0.0" />
+            <mass value="0.21196093233068553" />
+            <inertia ixx="0.00017114929919827894" iyy="0.0001469111980913878" izz="0.00030116952046030886" ixy="-1.5720931501039814e-18" iyz="2.7037291676357267e-18" ixz="-2.202285662861181e-18" />
+        </inertial>
+        <visual name="Chassis-1_visual">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/Chassis.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Chassis-1_collision">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/Chassis.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Emplacement_Moteur-1">
+        <inertial>
+            <origin xyz="0.00018264354212428448 -0.018578056787563444 0.0020604245825693156" rpy="0.0 -0.0 0.0" />
+            <mass value="0.05666008368055856" />
+            <inertia ixx="1.2139944779560714e-05" iyy="7.390384559666164e-06" izz="1.2202708505212736e-05" ixy="9.578340128274613e-08" iyz="9.199629448996502e-08" ixz="2.448373394001402e-06" />
+        </inertial>
+        <visual name="Emplacement_Moteur-1_visual">
+            <origin xyz="0.007778174593050109 -0.035100000000000034 -0.01411345596729134" rpy="0.7853981633975923 1.0034516669538928e-15 1.570796326794894" />
+            <geometry>
+                <mesh filename="meshes/Emplacement_Moteur.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Emplacement_Moteur-1_collision">
+            <origin xyz="0.007778174593050109 -0.035100000000000034 -0.01411345596729134" rpy="0.7853981633975923 1.0034516669538928e-15 1.570796326794894" />
+            <geometry>
+                <mesh filename="meshes/Emplacement_Moteur.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Rotation_Horrizontale-1">
+        <inertial>
+            <origin xyz="0.0014500938658666663 0.023499999980284896 -0.013799906236358142" rpy="0.0 2.524354896707238e-29 2.2270310769781966e-31" />
+            <mass value="0.06428803829235512" />
+            <inertia ixx="1.926092042933382e-05" iyy="1.8675016758942094e-05" izz="1.9260920261709184e-05" ixy="-1.695833193868144e-06" iyz="1.6958331622453576e-06" ixz="1.3518309145883e-07" />
+        </inertial>
+        <visual name="Rotation_Horrizontale-1_visual">
+            <origin xyz="0.005499999999997121 -0.005500000000002686 -0.03799999999999998" rpy="2.2305417370969085e-15 -1.5707963267947915 0" />
+            <geometry>
+                <mesh filename="meshes/Rotation_Horrizontale.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Rotation_Horrizontale-1_collision">
+            <origin xyz="0.005499999999997121 -0.005500000000002686 -0.03799999999999998" rpy="2.2305417370969085e-15 -1.5707963267947915 0" />
+            <geometry>
+                <mesh filename="meshes/collision_form/Rotation_Horrizontale_vhacd2.obj" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Emplacement_Moteur_Double-1">
+        <inertial>
+            <origin xyz="0.015589156449412266 0.00183205068988335 0.02449999999999162" rpy="1.262177448353619e-29 4.157451522281758e-30 0.0" />
+            <mass value="0.11882840187345695" />
+            <inertia ixx="5.0163572819187036e-05" iyy="6.0618480288415126e-05" izz="1.5682922962262136e-05" ixy="-1.23517749662463e-07" iyz="-2.233382490049073e-18" ixz="-1.6318565560043534e-17" />
+        </inertial>
+        <visual name="Emplacement_Moteur_Double-1_visual">
+            <origin xyz="-0.0009999999999975894 0.007999999999999795 0.024500000000000313" rpy="1.570796326794967 1.5707963267948175 0" />
+            <geometry>
+                <mesh filename="meshes/Emplacement_Moteur_Double.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Emplacement_Moteur_Double-1_collision">
+            <origin xyz="-0.0009999999999975894 0.007999999999999795 0.024500000000000313" rpy="1.570796326794967 1.5707963267948175 0" />
+            <geometry>
+                <mesh filename="meshes/Emplacement_Moteur_Double.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Patte-1">
+        <inertial>
+            <origin xyz="-0.0440936805432389 0.004964274640176319 -0.01421264208271322" rpy="0.0 1.515263519924789e-29 0.0" />
+            <mass value="0.08863931841766456" />
+            <inertia ixx="1.384987512745327e-05" iyy="7.989769070293725e-05" izz="7.498764898014316e-05" ixy="1.4550663897315022e-05" iyz="4.564678281501597e-07" ixz="-3.5839432593411108e-06" />
+        </inertial>
+        <visual name="Patte-1_visual">
+            <origin xyz="0.0054999999999963125 -0.005500000003636213 -0.038000000000000214" rpy="-1.5707963267948106 1.5707963267948086 0" />
+            <geometry>
+                <mesh filename="meshes/Patte.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Patte-1_collision">
+            <origin xyz="0.0054999999999963125 -0.005500000003636213 -0.038000000000000214" rpy="-1.5707963267948106 1.5707963267948086 0" />
+            <geometry>
+                <mesh filename="meshes/Patte.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Rotation_Horrizontale-2">
+        <inertial>
+            <origin xyz="0.001450093865865838 0.02349999998028558 -0.013799906236357063" rpy="-3.1554436208840472e-30 -0.0 9.175217601442837e-30" />
+            <mass value="0.06428803829235512" />
+            <inertia ixx="1.9260920429334057e-05" iyy="1.8675016758941843e-05" izz="1.9260920261709124e-05" ixy="-1.6958331938681964e-06" iyz="1.69583316224523e-06" ixz="1.351830914586231e-07" />
+        </inertial>
+        <visual name="Rotation_Horrizontale-2_visual">
+            <origin xyz="0.0054999999999999225 -0.005500000000000691 -0.037999999999999846" rpy="7.41326909627341e-14 -1.5707963267948646 0" />
+            <geometry>
+                <mesh filename="meshes/Rotation_Horrizontale.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Rotation_Horrizontale-2_collision">
+            <origin xyz="0.0054999999999999225 -0.005500000000000691 -0.037999999999999846" rpy="7.41326909627341e-14 -1.5707963267948646 0" />
+            <geometry>
+                <mesh filename="meshes/collision_form/Rotation_Horrizontale_vhacd2.obj" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Emplacement_Moteur-2">
+        <inertial>
+            <origin xyz="0.001967356457877125 -0.018628056787563376 8.957541743240149e-05" rpy="-6.310887241768095e-30 -0.0 0.0" />
+            <mass value="0.05666008368055856" />
+            <inertia ixx="1.2139944779559992e-05" iyy="7.390384559666131e-06" izz="1.2202708505213373e-05" ixy="-9.578340128236005e-08" iyz="-9.199629448950835e-08" ixz="2.448373394001523e-06" />
+        </inertial>
+        <visual name="Emplacement_Moteur-2_visual">
+            <origin xyz="-0.00562817459305025 -0.035149999999999085 0.016263455967293207" rpy="-2.356194490192341 7.284738493841572e-14 1.5707963267949405" />
+            <geometry>
+                <mesh filename="meshes/Emplacement_Moteur.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Emplacement_Moteur-2_collision">
+            <origin xyz="-0.00562817459305025 -0.035149999999999085 0.016263455967293207" rpy="-2.356194490192341 7.284738493841572e-14 1.5707963267949405" />
+            <geometry>
+                <mesh filename="meshes/Emplacement_Moteur.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Emplacement_Moteur_Double-2">
+        <inertial>
+            <origin xyz="0.015589156449411355 -0.0018320506898846834 -0.024499999999992108" rpy="-3.1554436208840472e-30 -5.734105218675184e-31 -6.310887241768095e-30" />
+            <mass value="0.11882840187345695" />
+            <inertia ixx="5.0163572819187104e-05" iyy="6.061848028841408e-05" izz="1.5682922962262102e-05" ixy="1.2351774966322748e-07" iyz="-3.0598699526833034e-18" ixz="1.5167899919915566e-17" />
+        </inertial>
+        <visual name="Emplacement_Moteur_Double-2_visual">
+            <origin xyz="-0.0009999999999988018 -0.008000000000000215 -0.024500000000000136" rpy="-1.5707963267948806 -1.5707963267948528 0" />
+            <geometry>
+                <mesh filename="meshes/Emplacement_Moteur_Double.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Emplacement_Moteur_Double-2_collision">
+            <origin xyz="-0.0009999999999988018 -0.008000000000000215 -0.024500000000000136" rpy="-1.5707963267948806 -1.5707963267948528 0" />
+            <geometry>
+                <mesh filename="meshes/Emplacement_Moteur_Double.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Patte-2">
+        <inertial>
+            <origin xyz="-0.044093680543236966 -0.004964274640175666 0.014212642082717665" rpy="0.0 -8.771572326726048e-32 0.0" />
+            <mass value="0.08863931841766456" />
+            <inertia ixx="1.3849875127453274e-05" iyy="7.989769070293641e-05" izz="7.498764898014148e-05" ixy="-1.4550663897313045e-05" iyz="4.564678281517564e-07" ixz="3.583943259347536e-06" />
+        </inertial>
+        <visual name="Patte-2_visual">
+            <origin xyz="0.005500000000000896 0.005500000003636187 0.03799999999999934" rpy="1.5707963267949565 -1.5707963267948482 0" />
+            <geometry>
+                <mesh filename="meshes/Patte.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Patte-2_collision">
+            <origin xyz="0.005500000000000896 0.005500000003636187 0.03799999999999934" rpy="1.5707963267949565 -1.5707963267948482 0" />
+            <geometry>
+                <mesh filename="meshes/Patte.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Emplacement_Moteur_Inverse-1">
+        <inertial>
+            <origin xyz="-8.957541743090603e-05 0.018628056787563452 0.0019673564578762816" rpy="0.0 -0.0 0.0" />
+            <mass value="0.05666008368055857" />
+            <inertia ixx="1.2202708505213475e-05" iyy="7.390384559665983e-06" izz="1.2139944779560177e-05" ixy="-9.19962944900239e-08" iyz="9.578340128282167e-08" ixz="-2.448373394001308e-06" />
+        </inertial>
+        <visual name="Emplacement_Moteur_Inverse-1_visual">
+            <origin xyz="-0.016263455967290646 0.035150000000000035 -0.005628174593051701" rpy="-2.3561944901923604 2.0177013668448086e-15 -1.5707963267948974" />
+            <geometry>
+                <mesh filename="meshes/Emplacement_Moteur_Inverse.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Emplacement_Moteur_Inverse-1_collision">
+            <origin xyz="-0.016263455967290646 0.035150000000000035 -0.005628174593051701" rpy="-2.3561944901923604 2.0177013668448086e-15 -1.5707963267948974" />
+            <geometry>
+                <mesh filename="meshes/Emplacement_Moteur_Inverse.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Rotation_Horrizontale-3">
+        <inertial>
+            <origin xyz="0.0014500938658678897 -0.023499999980285777 0.013799906236356376" rpy="3.944304526105059e-31 1.5777218104420236e-30 -4.1770303684899735e-31" />
+            <mass value="0.06428803829235512" />
+            <inertia ixx="1.9260920429333793e-05" iyy="1.867501675894182e-05" izz="1.9260920261709733e-05" ixy="1.6958331938681422e-06" iyz="1.695833162245038e-06" ixz="-1.351830914587197e-07" />
+        </inertial>
+        <visual name="Rotation_Horrizontale-3_visual">
+            <origin xyz="0.0055000000000000925 0.005500000000000105 0.037999999999999666" rpy="-3.141592653589793 1.5707963267948921 0" />
+            <geometry>
+                <mesh filename="meshes/Rotation_Horrizontale.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Rotation_Horrizontale-3_collision">
+            <origin xyz="0.0055000000000000925 0.005500000000000105 0.037999999999999666" rpy="-3.141592653589793 1.5707963267948921 0" />
+            <geometry>
+                <mesh filename="meshes/collision_form/Rotation_Horrizontale_vhacd2.obj" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Emplacement_Moteur_Double-3">
+        <inertial>
+            <origin xyz="0.015589156449410484 0.0018320506898842881 0.02449999999999262" rpy="0.0 -5.290545959084646e-32 0.0" />
+            <mass value="0.11882840187345695" />
+            <inertia ixx="5.016357281918641e-05" iyy="6.0618480288414096e-05" izz="1.5682922962261946e-05" ixy="-1.2351774966345624e-07" iyz="-1.761800602164209e-18" ixz="-1.4148841418632702e-17" />
+        </inertial>
+        <visual name="Emplacement_Moteur_Double-3_visual">
+            <origin xyz="-0.0009999999999998571 0.007999999999999355 0.024500000000000296" rpy="1.5707963267948846 1.5707963267948664 0" />
+            <geometry>
+                <mesh filename="meshes/Emplacement_Moteur_Double.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Emplacement_Moteur_Double-3_collision">
+            <origin xyz="-0.0009999999999998571 0.007999999999999355 0.024500000000000296" rpy="1.5707963267948846 1.5707963267948664 0" />
+            <geometry>
+                <mesh filename="meshes/Emplacement_Moteur_Double.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Patte-3">
+        <inertial>
+            <origin xyz="-0.04409368054323833 0.004964274640173485 -0.014212642082716165" rpy="-1.5777218104420236e-30 1.1630365263858622e-30 3.944304526105059e-31" />
+            <mass value="0.08863931841766456" />
+            <inertia ixx="1.3849875127451278e-05" iyy="7.989769070293788e-05" izz="7.498764898014097e-05" ixy="1.4550663897310002e-05" iyz="4.564678281512549e-07" ixz="-3.5839432593453718e-06" />
+        </inertial>
+        <visual name="Patte-3_visual">
+            <origin xyz="0.005499999999999296 -0.005500000003635128 -0.037999999999999916" rpy="-1.5707963267948806 1.5707963267948803 0" />
+            <geometry>
+                <mesh filename="meshes/Patte.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Patte-3_collision">
+            <origin xyz="0.005499999999999296 -0.005500000003635128 -0.037999999999999916" rpy="-1.5707963267948806 1.5707963267948803 0" />
+            <geometry>
+                <mesh filename="meshes/Patte.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Emplacement_Moteur_Inverse-2">
+        <inertial>
+            <origin xyz="-0.00018264354212391254 -0.01862805678756338 -0.0022395754174313787" rpy="0.0 -0.0 0.0" />
+            <mass value="0.05666008368055857" />
+            <inertia ixx="1.2139944779560233e-05" iyy="7.390384559665967e-06" izz="1.2202708505213531e-05" ixy="-9.578340128281826e-08" iyz="9.199629448994685e-08" ixz="-2.4483733940015043e-06" />
+        </inertial>
+        <visual name="Emplacement_Moteur_Inverse-2_visual">
+            <origin xyz="-0.007778174593052043 -0.035149999999999515 -0.018413455967291485" rpy="-0.7853981633974627 -2.0187893364524787e-14 1.5707963267948877" />
+            <geometry>
+                <mesh filename="meshes/Emplacement_Moteur_Inverse.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Emplacement_Moteur_Inverse-2_collision">
+            <origin xyz="-0.007778174593052043 -0.035149999999999515 -0.018413455967291485" rpy="-0.7853981633974627 -2.0187893364524787e-14 1.5707963267948877" />
+            <geometry>
+                <mesh filename="meshes/Emplacement_Moteur_Inverse.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Rotation_Horrizontale-4">
+        <inertial>
+            <origin xyz="0.001450093865867812 -0.023499999980286363 0.013799906236355486" rpy="0.0 -0.0 1.992672136428158e-30" />
+            <mass value="0.06428803829235512" />
+            <inertia ixx="1.9260920429333732e-05" iyy="1.8675016758942006e-05" izz="1.926092026170903e-05" ixy="1.6958331938680944e-06" iyz="1.695833162245042e-06" ixz="-1.3518309145869096e-07" />
+        </inertial>
+        <visual name="Rotation_Horrizontale-4_visual">
+            <origin xyz="0.005499999999999865 0.005499999999998701 0.037999999999999874" rpy="-3.141592653589793 1.570796326794862 0" />
+            <geometry>
+                <mesh filename="meshes/Rotation_Horrizontale.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Rotation_Horrizontale-4_collision">
+            <origin xyz="0.005499999999999865 0.005499999999998701 0.037999999999999874" rpy="-3.141592653589793 1.570796326794862 0" />
+            <geometry>
+                <mesh filename="meshes/collision_form/Rotation_Horrizontale_vhacd2.obj" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Emplacement_Moteur_Double-4">
+        <inertial>
+            <origin xyz="0.015589156449411208 -0.0018320506898835487 -0.024499999999992195" rpy="1.5777218104420236e-30 1.1609318225572054e-30 0.0" />
+            <mass value="0.11882840187345695" />
+            <inertia ixx="5.016357281918655e-05" iyy="6.0618480288414015e-05" izz="1.5682922962262488e-05" ixy="1.2351774966281093e-07" iyz="-2.1845675465270435e-18" ixz="1.4836871869945636e-17" />
+        </inertial>
+        <visual name="Emplacement_Moteur_Double-4_visual">
+            <origin xyz="-0.0009999999999986643 -0.00799999999999968 -0.024500000000000244" rpy="-1.5707963267948442 -1.5707963267948544 0" />
+            <geometry>
+                <mesh filename="meshes/Emplacement_Moteur_Double.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Emplacement_Moteur_Double-4_collision">
+            <origin xyz="-0.0009999999999986643 -0.00799999999999968 -0.024500000000000244" rpy="-1.5707963267948442 -1.5707963267948544 0" />
+            <geometry>
+                <mesh filename="meshes/Emplacement_Moteur_Double.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Patte-4">
+        <inertial>
+            <origin xyz="-0.044093680543237534 -0.004964274640175378 0.014212642082718246" rpy="0.0 5.167961029622619e-31 0.0" />
+            <mass value="0.08863931841766456" />
+            <inertia ixx="1.3849875127453118e-05" iyy="7.98976907029372e-05" izz="7.498764898013891e-05" ixy="-1.4550663897312276e-05" iyz="4.5646782815214344e-07" ixz="3.5839432593479052e-06" />
+        </inertial>
+        <visual name="Patte-4_visual">
+            <origin xyz="0.005500000000000896 0.005500000003634441 0.03799999999999975" rpy="1.5707963267949467 -1.5707963267948573 0" />
+            <geometry>
+                <mesh filename="meshes/Patte.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Patte-4_collision">
+            <origin xyz="0.005500000000000896 0.005500000003634441 0.03799999999999975" rpy="1.5707963267949467 -1.5707963267948573 0" />
+            <geometry>
+                <mesh filename="meshes/Patte.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="Rev_ARD_V1" type="revolute">
+        <origin xyz="0.01624999999999859 0.04699999999999895 -0.015250000000004526" rpy="1.5707963267949654 -1.473937094045259e-13 3.1415926535897203" />
+        <parent link="Rotation_Horrizontale-1" />
+        <child link="Emplacement_Moteur_Double-1" />
+        <axis xyz="0.9999999999999978 2.786999939012132e-15 -7.416873968880389e-14" />
+        <limit lower="-1.570796" upper="1.570796" effort="1000000" velocity="1000000" />
+    </joint>
+    <joint name="Rev_ARD_V2" type="revolute">
+        <origin xyz="0.0010000000000037802 -8.248957072964913e-16 0.04900000000000037" rpy="-3.141592653589723 1.5707963267947325 0" />
+        <parent link="Emplacement_Moteur_Double-1" />
+        <child link="Patte-1" />
+        <axis xyz="7.405187574249794e-14 7.119147038242786e-14 1.0000000000000107" />
+        <limit lower="-2.356194" upper="0.785398" effort="1000000" velocity="1000000" />
+    </joint>
+    <joint name="Rev_ARD_H" type="revolute">
+        <origin xyz="0.012020815280170481 -0.01060000000000005 -0.007042388155426523" rpy="-2.356194490192342 1.0422404367752924e-13 -1.5707963267947906" />
+        <parent link="Emplacement_Moteur-1" />
+        <child link="Rotation_Horrizontale-1" />
+        <axis xyz="1.485708859578321e-13 -2.9211022487117275e-15 0.9999999999999954" />
+        <limit lower="-1.570796" upper="1.570796" effort="1000000" velocity="1000000" />
+    </joint>
+    <joint name="Rigide_ARD" type="fixed">
+        <origin xyz="0.04202027957955213 0.07810000000000016 0.011520279579551065" rpy="3.141592653589793 -0.7853981633974516 3.141592653589793" />
+        <parent link="Chassis-1" />
+        <child link="Emplacement_Moteur-1" />
+    </joint>
+    <joint name="Rev_AVG_H" type="revolute">
+        <origin xyz="-0.009870815280170659 -0.010649999999999793 0.009192388155425998" rpy="0.7853981633974786 -3.205617405145942e-14 -1.5707963267949168" />
+        <parent link="Emplacement_Moteur-2" />
+        <child link="Rotation_Horrizontale-2" />
+        <axis xyz="-8.497855136997144e-15 2.5239032783966818e-14 0.999999999999995" />
+        <limit lower="-1.570796" upper="1.570796" effort="1000000" velocity="1000000" />
+    </joint>
+    <joint name="Rev_AVG_V1" type="revolute">
+        <origin xyz="0.01624999999999616 0.04700000000000079 -0.015250000000001509" rpy="-1.5707963267948504 -2.8706058565398385e-14 -3.1415926535897607" />
+        <parent link="Rotation_Horrizontale-2" />
+        <child link="Emplacement_Moteur_Double-2" />
+        <axis xyz="0.9999999999999987 3.8702714785638906e-14 4.456093053586641e-15" />
+        <limit lower="-1.570796" upper="1.570796" effort="1000000" velocity="1000000" />
+    </joint>
+    <joint name="Rev_AVG_V2" type="revolute">
+        <origin xyz="0.0010000000000021459 -1.8096635301390053e-16 -0.04900000000000043" rpy="-3.141592653589735 -1.5707963267948375 0" />
+        <parent link="Emplacement_Moteur_Double-2" />
+        <child link="Patte-2" />
+        <axis xyz="4.496403249731884e-15 -2.2122171229426476e-14 -1.0000000000000098" />
+        <limit lower="-2.356194" upper="0.785398" effort="1000000" velocity="1000000" />
+    </joint>
+    <joint name="Rigide_AVG" type="fixed">
+        <origin xyz="-0.038979720420449206 0.0025000000000027 0.011520279579551066" rpy="6.426424947170849e-14 0.7853981633974509 3.141592653589793" />
+        <parent link="Chassis-1" />
+        <child link="Emplacement_Moteur-2" />
+    </joint>
+    <joint name="Rev_AVD_V2" type="revolute">
+        <origin xyz="0.0010000000000005243 -1.403321903126198e-15 0.04900000000000034" rpy="3.141592653589781 1.5707963267948795 0" />
+        <parent link="Emplacement_Moteur_Double-3" />
+        <child link="Patte-3" />
+        <axis xyz="5.551115123125783e-15 -9.515819300866433e-15 1.0000000000000062" />
+        <limit lower="-2.356194" upper="0.785398" effort="1000000" velocity="1000000" />
+    </joint>
+    <joint name="Rev_AVD_V1" type="revolute">
+        <origin xyz="0.016249999999999983 -0.04699999999999984 0.015249999999999986" rpy="-1.5707963267949074 -1.5221497814816848e-14 -3.1415926535897842" />
+        <parent link="Rotation_Horrizontale-3" />
+        <child link="Emplacement_Moteur_Double-3" />
+        <axis xyz="0.9999999999999949 3.619667207484024e-15 -6.817206217240917e-15" />
+        <limit lower="-1.570796" upper="1.570796" effort="1000000" velocity="1000000" />
+    </joint>
+    <joint name="Rev_AVD_H" type="revolute">
+        <origin xyz="-0.00919238815542526 0.010650000000000048 -0.009870815280171143" rpy="-0.7853981633974542 -4.764434057824909e-15 -1.5707963267948908" />
+        <parent link="Emplacement_Moteur_Inverse-1" />
+        <child link="Rotation_Horrizontale-3" />
+        <axis xyz="1.1657341758564134e-14 -2.412898554340499e-15 1.0" />
+        <limit lower="-1.570796" upper="1.570796" effort="1000000" velocity="1000000" />
+    </joint>
+    <joint name="Rigide_AVD" type="fixed">
+        <origin xyz="0.03897972042044857 0.002500000000000089 0.01152027957955107" rpy="3.1415926535897873 0.7853981633974523 3.141592653589793" />
+        <parent link="Chassis-1" />
+        <child link="Emplacement_Moteur_Inverse-1" />
+    </joint>
+    <joint name="Rev_ARG_H" type="revolute">
+        <origin xyz="-0.01202081528017124 -0.010649999999999658 -0.01134238815542556" rpy="0.785398163397416 -3.170260767998522e-14 1.5707963267948761" />
+        <parent link="Emplacement_Moteur_Inverse-2" />
+        <child link="Rotation_Horrizontale-4" />
+        <axis xyz="-1.2698175844150159e-14 -2.8427329483614844e-14 0.9999999999999993" />
+        <limit lower="-1.570796" upper="1.570796" effort="1000000" velocity="1000000" />
+    </joint>
+    <joint name="Rev_ARG_V1" type="revolute">
+        <origin xyz="0.01624999999999984 -0.04700000000000054 0.015249999999998301" rpy="1.5707963267948577 5.462053740120357e-14 -3.141592653589757" />
+        <parent link="Rotation_Horrizontale-4" />
+        <child link="Emplacement_Moteur_Double-4" />
+        <axis xyz="0.9999999999999974 4.192236155705186e-14 -4.298901816818027e-15" />
+        <limit lower="-1.570796" upper="1.570796" effort="1000000" velocity="1000000" />
+    </joint>
+    <joint name="Rev_ARG_V2" type="revolute">
+        <origin xyz="0.0010000000000018794 9.681144774731366e-16 -0.04900000000000041" rpy="-3.141592653589762 -1.5707963267948637 0" />
+        <parent link="Emplacement_Moteur_Double-4" />
+        <child link="Patte-4" />
+        <axis xyz="-5.662137425588298e-15 9.012720060970305e-15 -1.0000000000000044" />
+        <limit lower="-2.356194" upper="0.785398" effort="1000000" velocity="1000000" />
+    </joint>
+    <joint name="Rigide_ARG" type="fixed">
+        <origin xyz="-0.0389797204204478 0.07810000000000274 0.008479720420448925" rpy="3.141592653589723 0.7853981633974451 3.141592653589793" />
+        <parent link="Chassis-1" />
+        <child link="Emplacement_Moteur_Inverse-2" />
+    </joint>
+</robot>

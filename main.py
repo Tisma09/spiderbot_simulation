@@ -12,7 +12,8 @@ from world_simulate import WorldSimulate
 ################################################################################################
 
 debug = False
-physics_world = WorldSimulate(p.GUI, "plane.urdf", "Robot_mesh_urdf_V2/RobotProto_With_Col.urdf")
+#physics_world = WorldSimulate(p.GUI, "plane.urdf", "Robot_mesh_urdf_V2/RobotProto_With_Col.urdf")
+physics_world = WorldSimulate(p.GUI, "plane.urdf", "Robot_mesh_urdf_V3/RobotSpider_With_Col.urdf")
 
 p.resetDebugVisualizerCamera(
     cameraDistance=0.4,             # Zoom (augmenter pour dézoomer)
@@ -77,7 +78,7 @@ while True:
                 jointIndex=joint_index,
                 controlMode=p.POSITION_CONTROL,
                 targetPosition=position,
-                force=1,
+                force=100,
                 physicsClientId = physics_world.client_id
             )
 
